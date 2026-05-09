@@ -690,17 +690,22 @@
     position: relative; z-index: 1;
     filter: grayscale(20%);
   }
-  #s10 .icon-decoration {
-    position: absolute; bottom: -20px; left: -20px;
-    width: 60px; height: 60px; z-index: 3;
-    background: var(--dark);
-    border-radius: 50%;
-    padding: 6px;
-    box-shadow: 0 0 0 1px rgba(201,168,76,0.3);
+  #s10 .logo-frame {
+    flex: 0 0 340px;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
   }
-  #s10 .icon-decoration img {
-    width: 100%; height: 100%;
-    object-fit: contain; filter: drop-shadow(0 2px 6px rgba(201,168,76,0.4));
+  #s10 .logo-frame::before {
+    content: '';
+    position: absolute; inset: -24px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+  }
+  #s10 .logo-frame img {
+    width: 100%; max-width: 320px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 40px rgba(201,168,76,0.35));
+    position: relative; z-index: 1;
   }
 
   /* ── Keyframe entrance animation for slide elements ── */
@@ -918,11 +923,8 @@
           Até 5 indicações por rodada · Sem burocracia
         </p>
       </div>
-      <div class="photo-frame anim anim-3">
-        <img src="Fábio Porcelli (1).png" alt="Fábio Porcelli">
-        <div class="icon-decoration">
-          <img src="LOGO2 destaque-se NOVO - ICONE SEM FUNDO.png" alt="ícone Destaque-se">
-        </div>
+      <div class="logo-frame anim anim-3">
+        <img src="LOGO2 destaque-se NOVO - SEM FUNDO.png" alt="Destaque-se">
       </div>
     </div>
   </section>
